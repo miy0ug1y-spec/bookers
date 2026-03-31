@@ -1,12 +1,12 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.all
     @books =Book.new
+    @books = Book.all
   end
 
   def create
-    @books = Book.new(book_params)
-    if @books.save
+    book = Book.new(book_params)
+    if book.save
     redirect_to '/books/:id/edit'
     else
     render :index, status: :unprocessable_entity
