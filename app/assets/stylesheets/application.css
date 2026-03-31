@@ -8,3 +8,8 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+.fiel_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}

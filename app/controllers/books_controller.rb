@@ -5,18 +5,22 @@ class BooksController < ApplicationController
   end
 
   def create
-    book = Book.new(list_params)
-    book.save
-    redirect_to '/'
+    @books = Book.new(book_params)
+    if @books.save
+    redirect_to '/books/:id/edit'
+    else
+    render :index, status: :unprocessable_entity
+    end
   end
 
   def show
-    
+    @books = Book.find(params[:id])
   end
 
   def edit
-
+   
   end
+
 
   private
   def book_params
