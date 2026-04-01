@@ -23,12 +23,9 @@
   </head>
 
   <body>
-    <main>
-
+    <p>
+      <div><%= flash[:notice] %></div>
+    </p>
     <%= yield %>
-    <div class= field_with_errors>
-    </div>
-
-    </main>
   </body>
 </html>

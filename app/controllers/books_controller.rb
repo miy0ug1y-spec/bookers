@@ -1,14 +1,16 @@
 class BooksController < ApplicationController
   def index
-    @books =Book.new
-    @books = Book.all
+    @book =Book.new
+    @books = Book.all.order(created_at: :desc)
   end
 
   def create
-    book = Book.new(book_params)
-    if book.save
+    @book = Book.new(book_params)
+    if @book.save
+    flash[:notice] = "Book was successfully created."
     redirect_to '/books/:id/edit'
     else
+    @books = Book.all.order(created_at: :desc)
     render :index, status: :unprocessable_entity
     end
   end
@@ -18,7 +20,14 @@ class BooksController < ApplicationController
   end
 
   def edit
+   @book = Book.find(params[:id])
    
+  end
+
+  def destroy
+     book = Book.find(params[:id])
+     book.destroy
+     redirect_to '/'
   end
 
 

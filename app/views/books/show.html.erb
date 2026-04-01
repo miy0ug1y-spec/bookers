@@ -4,7 +4,11 @@
 
 
 <p><Strong>title:</Strong></p>
-<p><%= @book.title %></p>
+<p><%= @books.title %></p>
 
-<p><strong>本文</strong></p>
-<p><%= @book.body %></p>
+<p><strong>body:</strong></p>
+<p><%= @books.body %></p>
+
+<a href="/books/:id/edit">Edit</a>
+<span>|</span>
+<a href="/books">Back</a>

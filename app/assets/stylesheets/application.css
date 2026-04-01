@@ -8,8 +8,24 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
-.fiel_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px; 
+}
+ 
+td {
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+p {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
 }
