@@ -4,16 +4,16 @@
 
 <p>
   <Strong>Title:</Strong>
-  <%= @books.title %>
+  <%= @book.title %>
 </p>
 
 <p>
   <strong>Body:</strong>
-  <%= @books.body %>
+  <%= @book.body %>
 </p>
 
 
-<%= link_to "Edit",edit_book_path(@books) %>
+<%= link_to "Edit",edit_book_path(@book) %>
 <span>|</span>
 <%= link_to "Back",books_path %>
 
