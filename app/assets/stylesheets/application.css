@@ -29,3 +29,11 @@ p {
   line-height: 18px;
   margin: 33px;
 }
+
+.field {
+  margin-bottom: 10px;
+}
+
+.action {
+  margin-bottom: 10px;
+}
